@@ -9,6 +9,17 @@
 <p>Hello world</p>
 
 <h3>Benvenuto <span th:text=${nome}></span></h3>
+
+
+
+
+<ul>
+<li th:each = "colore :  ${lista}">
+<span th:text =${colore}></span>
+
+</li>
+
+</ul>
 <br>
 <form action = "/contatti" method = "GET">
 <input type = "submit" value = "Vai a contatti"></form>

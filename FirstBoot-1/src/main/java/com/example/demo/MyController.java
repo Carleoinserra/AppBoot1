@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +15,15 @@ public class MyController {
 		
 		String nome = "Carlo";
 		
+		ArrayList <String> lista = new ArrayList<>();
+		
+		lista.add("giallo");
+		lista.add("verde");
+		lista.add("rosa");
+		lista.add("azzurro");
+		
 		model.addAttribute("nome", nome);
+		model.addAttribute("lista", lista);
 		
 		
 		
