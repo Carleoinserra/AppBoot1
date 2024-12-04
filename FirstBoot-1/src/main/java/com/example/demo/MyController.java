@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class MyController {
 	
+	
+	ArrayList<User> listaU = new ArrayList<>();
+	
 	@GetMapping("/")
 	public String getHello(Model model) {
 		
@@ -44,10 +47,18 @@ public class MyController {
 		return "form";
 	}
 	@PostMapping("/submit")
-	public String submit(@RequestParam("nome") String nome, Model model) {
+	public String submit(@RequestParam("nome") String nome, @RequestParam("cognome") String cognome,Model model) {
 		
 		
 		//System.out.println(nome);
+		
+		User d1 = new User();
+		d1.setNome(nome);
+		d1.setCognome(cognome);
+		
+		listaU.add(d1);
+		
+		
 		
 		model.addAttribute("nome",nome);
 		
@@ -55,7 +66,18 @@ public class MyController {
 		
 		
 		
+		
 		return "result";
 	}
+	
+	@GetMapping("/mostra")
+	public String getUser(Model model) {
+		
+		model.addAttribute("lista", listaU);
+		
+		return "mostra";
+	}
+	
+	 
 
 }

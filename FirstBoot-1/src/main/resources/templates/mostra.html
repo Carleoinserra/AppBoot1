@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<ul>
+<li th:each = "user :  ${lista}">
+<span>Nome: </span>
+<span th:text =${user.nome}> </span>
+<span>, Cognome: </span>
+<span th:text =${user.cognome}> </span>
+</li>
+
+</ul>
+</body>
+</html>
