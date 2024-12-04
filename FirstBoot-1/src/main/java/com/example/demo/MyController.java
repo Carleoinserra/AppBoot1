@@ -47,7 +47,11 @@ public class MyController {
 		return "form";
 	}
 	@PostMapping("/submit")
-	public String submit(@RequestParam("nome") String nome, @RequestParam("cognome") String cognome,Model model) {
+	public String submit(@RequestParam("nome") String nome, @RequestParam("cognome") String cognome,
+			
+			@RequestParam("url") String url,
+			
+			Model model) {
 		
 		
 		//System.out.println(nome);
@@ -55,6 +59,9 @@ public class MyController {
 		User d1 = new User();
 		d1.setNome(nome);
 		d1.setCognome(cognome);
+		d1.setUrl(url);
+		
+		System.out.println(d1.getUrl());
 		
 		listaU.add(d1);
 		

@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+img {
+width: 5%;
+}
+
+</style>
 </head>
 <body>
 <ul>
@@ -11,6 +17,8 @@
 <span th:text =${user.nome}> </span>
 <span>, Cognome: </span>
 <span th:text =${user.cognome}> </span>
+<br>
+<img th:src = ${user.getUrl()}>
 </li>
 
 </ul>

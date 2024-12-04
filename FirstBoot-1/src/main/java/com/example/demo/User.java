@@ -4,6 +4,13 @@ public class User {
 	
 	private String nome;
 	private String cognome;
+	String url;
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
 	public String getNome() {
 		return nome;
 	}
